@@ -12,13 +12,15 @@
   <header class="header">
     <nav class="nav">
       <div class="logo">Yousef Fathi</div>
-      <ul class="nav-links">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li class="theme-toggle-li"><button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle theme (mobile)"><i class="fas fa-moon"></i></button></li>
       </ul>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+      <button class="theme-toggle" id="themeToggleDesktop" aria-label="Toggle theme (desktop)"><i class="fas fa-moon"></i></button>
     </nav>
   </header>
 
@@ -40,8 +42,9 @@
     <section id="projects" class="projects main-bg">
       <h2>My Projects</h2>
       <div class="project-grid">
+        <!-- bushraa -->
         <div class="project-card">
-          <img class="project-image" src="src/assets/bushraa.png" alt="Bushraa App Screenshot">
+          <img class="project-image" src="src/assets/bushraa.png" alt="Screenshot">
           <h3>Bushraa</h3>
           <p>Trusted dream interpretation app with real-time chat, expert selection, and online payment.</p>
           <div class="store-btn-row">
@@ -59,8 +62,10 @@
             </a>
           </div>
         </div>
+
+        <!-- Haykl -->
         <div class="project-card">
-          <img class="project-image" src="src/assets/haykl.png" alt="Haykl App Screenshot">
+          <img class="project-image" src="src/assets/haykl.png" alt="Screenshot">
           <h3>Haykl</h3>
           <p>Construction-focused app offering turnkey solutions and direct communication with contractors.</p>
           <div class="store-btn-row">
@@ -72,8 +77,10 @@
             </a>
           </div>
         </div>
+
+        <!-- Bimokook -->
         <div class="project-card">
-          <img class="project-image" src="src/assets/bimo_logo.png" alt="BimoKook App Screenshot">
+          <img class="project-image" src="src/assets/bimo_logo.png" alt="Screenshot">
           <h3>BimoKook</h3>
           <p>E-commerce app with ERP integration, unit-based pricing, online payments, and push notifications.</p>
           <div class="store-btn-row">
@@ -85,8 +92,10 @@
             </a>
           </div>
         </div>
+
+        <!-- Kyan --> 
         <div class="project-card">
-          <img class="project-image" src="src/assets/kyan.png" alt="BimoKook App Screenshot">
+          <img class="project-image" src="src/assets/kyan.png" alt="Screenshot">
           <h3>Haykl</h3>
           <p>Real estate mobile app, akin to OLX, enabling sellers to list properties while providing seamless buying and selling experiences through advanced search and filtering for houses, apartments, villas, and more.</p>
           <div class="store-btn-row">
@@ -97,19 +106,22 @@
           </div>
         </div>
 
-        <!-- <div class="project-card">
-          <img class="project-image" src="src/assets/mahartafl.png" alt="Mahart Tafl App Screenshot">
-          <h3>Mahart Tafl</h3>
-          <p>Speech therapy app aiding kids through a guided speaking program with sound enhancements.</p>
+        <!-- Azkar --> 
+        <div class="project-card">
+          <img class="project-image" src="src/assets/azkar.png" alt="Screenshot">
+          <h3>Azkar</h3>
+          <p>A mobile app that helps users maintain their daily Azkar by offering a complete collection of morning and evening remembrances, a digital Tasbeeh, Qibla direction, and personalized prayer reminders – all within a simple and intuitive interface.</p>
           <div class="store-btn-row">
-            <a href="https://play.google.com/store/apps/details?id=com.maharattufl.maharatufl" class="store-btn google" target="_blank">
+            <a href="https://play.google.com/store/apps/details?id=com.alkashier.azkar" class="store-btn google" target="_blank">
               <i class="fab fa-google-play"></i> Google Play
             </a>
-            <a href="https://apps.apple.com/us/app/مهارة-طفل/id6467820570" class="store-btn apple" target="_blank">
+            <a href="https://apps.apple.com/us/app/azkar-challenge/id6740204164" class="store-btn apple" target="_blank">
               <i class="fab fa-apple"></i> App Store
             </a>
           </div>
-        </div> -->
+        </div>
+
+
       </div>
     </section>
 

@@ -48,4 +48,48 @@ const observer = new IntersectionObserver((entries) => {
 // Observe all sections
 document.querySelectorAll('section').forEach(section => {
   observer.observe(section);
+});
+
+// Responsive nav toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+    });
+  });
+}
+
+// Theme toggle logic (support both desktop and mobile buttons)
+function setTheme(dark) {
+  document.body.classList.toggle('dark-theme', dark);
+  // Update both icons
+  [document.getElementById('themeToggleDesktop'), document.getElementById('themeToggleMobile')].forEach(btn => {
+    if (btn) {
+      const icon = btn.querySelector('i');
+      if (dark) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    }
+  });
+}
+const savedTheme = localStorage.getItem('theme');
+setTheme(savedTheme === 'dark');
+['themeToggleDesktop', 'themeToggleMobile'].forEach(id => {
+  const btn = document.getElementById(id);
+  if (btn) {
+    btn.addEventListener('click', function() {
+      const isDark = !document.body.classList.contains('dark-theme');
+      setTheme(isDark);
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  }
 }); 
